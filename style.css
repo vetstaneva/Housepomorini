@@ -1,0 +1,1218 @@
+/* Основни стилове */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(180deg, #e0f7fa 0%, #f7fbff 100%);
+    color: #1a3557;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+header {
+    background: url('images/sea.png') center center/cover no-repeat;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 2px 16px rgba(0,150,199,0.10);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.top-bar {
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0 0 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.phones {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.phone-number {
+    color: #0096c7;
+    font-weight: bold;
+    font-size: 1.08em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background: #e0f7fa;
+    padding: 6px 18px;
+    border-radius: 18px;
+    transition: background 0.2s;
+    margin-bottom: 2px;
+    display: inline-block;
+}
+.phone-number:hover {
+    background: #caf0f8;
+    color: #0077a7;
+}
+
+.header-content {
+    background: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.site-title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: color 0.2s;
+    cursor: pointer;
+    background: rgba(0,0,0,0.08);
+}
+.site-title:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+nav button, .dropbtn {
+    background: #fff;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    min-width: 120px;
+    margin: 0 2px;
+}
+nav button:hover, .dropbtn:hover {
+    background: #caf0f8;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+}
+
+nav button.contacts-btn {
+    background: #e0f7fa;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+    font-weight: 700;
+}
+nav button.contacts-btn:hover {
+    background: #caf0f8;
+    color: #0096c7;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background: #fff;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 120px;
+    margin: 0 2px;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 32px rgba(0,150,199,0.13);
+    border-radius: 14px;
+    z-index: 1;
+    margin-top: 6px;
+}
+.dropdown-content a {
+    color: #0096c7;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    font-size: 0.98em;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.dropdown-content a:hover {
+    background: #caf0f8;
+}
+.show {
+    display: block;
+}
+
+/* Бутон с три черти */
+.burger-btn {
+    background: #fff;
+    border: 2px solid #0096c7;
+    border-radius: 18px;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    margin-left: 8px;
+    transition: background 0.2s, border 0.2s;
+}
+.burger-btn:hover {
+    background: #caf0f8;
+    border-color: #48cae4;
+}
+.burger-btn.contacts-btn {
+    background: #0096c7;
+    border: none;
+    border-radius: 22px;
+    padding: 6px 12px;
+    color: #fff;
+    min-width: 36px;
+    min-height: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+.burger-btn.contacts-btn:hover {
+    background: #48cae4;
+    color: #222b3a;
+}
+.burger-line {
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    margin: 2px 0;
+    border-radius: 2px;
+    display: block;
+}
+.burger-dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content.burger-content {
+    left: auto;
+    right: 0;
+}
+
+/* Основно съдържание */
+main {
+    max-width: 1200px;
+    margin: 48px auto 48px auto;
+    padding: 0 24px;
+}
+section {
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0 6px 32px rgba(0,150,199,0.10);
+    margin-bottom: 44px;
+    padding: 38px 32px 32px 32px;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+section:hover {
+    box-shadow: 0 12px 48px rgba(0,150,199,0.18);
+}
+section h2 {
+    color: #0096c7;
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+img {
+    margin: 18px 18px 18px 0;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,150,199,0.10);
+    max-width: 350px;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+.main-photo {
+    display: block;
+    margin: 0 auto 24px auto;
+    max-width: 450px;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,150,199,0.13);
+}
+.home-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Галерия и модал за снимки */
+.gallery-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.main-photo-large-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.main-photo-large {
+    width: 100%;
+    max-width: 820px;
+    max-height: 70vh;
+    height: auto;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    cursor: pointer;
+    object-fit: contain;
+    display: block;
+    background: transparent;
+}
+.gallery-thumbnails {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    justify-content: center;
+}
+.thumbs-wrapper {
+    display: flex;
+    overflow: hidden;
+    gap: 8px;
+    flex: 0 0 auto;
+    width: 300px;
+}
+.thumbnail {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.2s;
+    flex-shrink: 0;
+}
+.thumbnail.selected,
+.thumbnail:focus {
+    border: 2px solid #0096c7;
+}
+.thumb-arrow {
+    background: #0096c7;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.thumb-arrow:hover {
+    background: #48cae4;
+}
+
+/* Модал */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.85);
+    justify-content: center; align-items: center;
+}
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px #0008;
+    object-fit: contain;
+    background: transparent;
+}
+.close {
+    position: absolute;
+    top: 20px; right: 35px;
+    color: #fff; font-size: 40px; font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1002;
+    padding: 8px 16px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background 0.2s;
+}
+.arrow:hover {
+    background: rgba(0,0,0,0.5);
+}
+.arrow.left {
+    left: 30px;
+}
+.arrow.right {
+    right: 30px;
+}
+
+/* --- КОМПАКТЕН, ПОДРЕДЕН ФУТЪР --- */
+.footer-bottom-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 12px;
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+    padding: 14px 0 6px 0;
+    font-size: 0.92em;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex: 1 1 600px;
+    max-width: 60%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer-menu-col {
+    min-width: 100px;
+    margin: 0 1px;
+    text-align: left;
+}
+.footer-menu-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+.footer-menu-col li {
+    margin-bottom: 2px;
+}
+.footer-menu-col span {
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 1em;
+    margin-bottom: 4px;
+    display: block;
+}
+.footer-menu-col a {
+    color: #222;
+    text-decoration: none;
+    font-size: 0.97em;
+    transition: color 0.2s;
+    padding: 0;
+    line-height: 1.5;
+}
+.footer-menu-col a:hover {
+    color: #1976d2;
+    text-decoration: none;
+}
+.footer-contacts-form {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 300px;
+    gap: 12px;
+    max-width: 38%;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 2px;
+    min-width: 120px;
+}
+.footer-contacts h3 {
+    margin-bottom: 6px;
+    font-size: 1em;
+    color: #1976d2;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.footer-contacts a {
+    display: block;
+    margin-bottom: 2px;
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 0.97em;
+}
+.footer-contacts a:hover {
+    text-decoration: underline;
+}
+.footer-fb-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0 0 0;
+    width: 100%;
+}
+.footer-fb-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px #1976d222;
+}
+.footer-fb-logo:hover {
+    box-shadow: 0 2px 12px #1976d2;
+}
+.footer-contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-width: 120px;
+    max-width: 160px;
+    font-size: 0.97em;
+}
+.footer-contact-form h3 {
+    margin-bottom: 6px;
+    font-size: 1em;
+    color: #1976d2;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.footer-contact-form form input,
+.footer-contact-form form textarea {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 3px 6px;
+    font-size: 0.93em;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: #fff;
+}
+.footer-contact-form form textarea {
+    min-height: 28px;
+    max-height: 48px;
+}
+.footer-contact-form form button {
+    width: 100%;
+    padding: 5px 0;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.97em;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.footer-copy-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 0.92em;
+    color: #888;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 1100px) {
+    .footer-bottom-flex {
+        flex-wrap: wrap;
+        gap: 0 8px;
+    }
+    .footer-menu-col {
+        min-width: 90px;
+    }
+}
+@media (max-width: 900px) {
+    .footer-bottom-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px 0;
+        max-width: 98vw;
+        padding: 12px 0 6px 0;
+    }
+    .footer-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 0 8px;
+        margin-bottom: 8px;
+    }
+    .footer-contacts-form {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px 0;
+        margin-left: 0;
+    }
+}
+@media (max-width: 600px) {
+    .footer-bottom-flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px 0;
+    }
+    .footer-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .footer-menu-col {
+        min-width: 100px;
+        text-align: left;
+    }
+}
+
+/* Контакти секция */
+.contacts-flexbox-modern {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.contacts-phones-modern {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 220px;
+    max-width: 320px;
+    margin-right: 16px;
+}
+.phones-title {
+    font-size: 1.22em;
+    font-weight: 700;
+    color: #0096c7;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+.phone-number-modern {
+    font-size: 1.18em;
+    font-weight: 600;
+    color: #1976d2;
+    text-decoration: none;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    background: #e0f7fa;
+    border-radius: 16px;
+    padding: 7px 16px;
+    transition: background 0.2s, color 0.2s;
+}
+.phone-number-modern:hover {
+    background: #caf0f8;
+    color: #0096c7;
+}
+.phone-icon-blue {
+    font-size: 1.25em;
+    margin-right: 8px;
+    color: #0096c7;
+}
+.contact-note-bold {
+    margin-top: 14px;
+    font-size: 0.93em;
+    color: #1976d2;
+    font-weight: 500;
+    background: #e0f7fa;
+    border-radius: 8px;
+    padding: 7px 12px;
+}
+.contact-form-modern {
+    flex: 1 1 320px;
+    min-width: 240px;
+    max-width: 340px;
+    background: linear-gradient(135deg, #e0f7fa 60%, #b2eaff 100%);
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(0,150,199,0.13);
+    padding: 10px 24px 8px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: 2px solid #b2eaff;
+}
+.contact-form-modern input,
+.contact-form-modern textarea {
+    border-radius: 12px;
+    border: 1.5px solid #b2eaff;
+    background: #fff;
+    padding: 7px 10px;
+    font-size: 1em;
+    margin-bottom: 8px;
+    transition: border 0.2s;
+}
+.contact-form-modern input:focus,
+.contact-form-modern textarea:focus {
+    border: 1.5px solid #0096c7;
+    outline: none;
+}
+.contact-form-modern button {
+    background: #0096c7;
+    color: #fff;
+    border: none;
+    border-radius: 14px;
+    padding: 9px 0;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px #b2eaff55;
+}
+.contact-form-modern button:hover {
+    background: #1976d2;
+}
+@media (max-width: 800px) {
+    .contacts-flexbox-modern {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+    .contacts-phones-modern,
+    .contact-form-modern {
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Локация секция */
+.location-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 28px;
+}
+.location-address {
+    flex: 0 0 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.12em;
+    font-weight: 600;
+    color: #1976d2;
+    text-align: center;
+    min-height: 100px;
+}
+.location-map {
+    flex: 1 1 420px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.location-map iframe {
+    width: 100%;
+    max-width: 420px;
+    min-width: 220px;
+    height: 260px;
+    border-radius: 14px;
+    border: 0;
+    box-shadow: 0 2px 16px #0096c722;
+}
+@media (max-width: 900px) {
+    .location-flex-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+    .location-map {
+        justify-content: center;
+    }
+    .location-map iframe {
+        max-width: 100%;
+        min-width: 0;
+        height: 200px;
+    }
+    .location-address {
+        max-width: 100%;
+        min-width: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Заглавие "Как да стигнем до къщата?" най-вляво и артистично */
+.location-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #0096c7;
+    margin: 0 0 18px 0;
+    letter-spacing: 1px;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    text-align: left;
+    font-style: italic;
+    font-family: 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Как да стигнем до къщата – бутони и текст */
+.how-btns-vertical {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.how-btn-vertical {
+    width: 100%;
+    border-radius: 0;
+    padding: 12px 0 12px 0;
+    box-sizing: border-box;
+    text-align: left;
+    background: #e0f7fa;
+    color: #0096c7;
+    border: none;
+    font-size: 1.08em;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border-bottom: 1px solid #b2eaff;
+}
+.how-btn-vertical:hover,
+.how-btn-vertical.active {
+    background: #b2eaff;
+    color: #1976d2;
+}
+.travel-info-section-vertical {
+    display: none;
+    width: 100%;
+    background: #f7fbff;
+    border-radius: 0 0 14px 14px;
+    box-shadow: none;
+    padding: 18px 0 10px 0;
+    margin: 0;
+    animation: fadeInDown 0.3s;
+    box-sizing: border-box;
+}
+.travel-info-section-vertical.active {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+}
+.travel-info-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+}
+.travel-info-text {
+    flex: 2 1 60%;
+    font-size: 1.05em;
+    color: #1a3557;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+}
+.travel-info-gallery {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.travel-thumb {
+    width: 70px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0;
+    box-shadow: 0 2px 8px #0096c722;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .how-btns-vertical {
+        max-width: 100%;
+    }
+    .travel-info-section-vertical.active,
+    .travel-info-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .travel-info-gallery {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .travel-thumb {
+        width: 54px;
+        height: 36px;
+    }
+}
+
+/* Анимация за показване на текст */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+/* ...existing code... */
+.location-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;              /* по-малко разстояние между адреса и картата */
+    margin-bottom: 28px;
+    max-width: 700px;       /* по-малка ширина за по-централно позициониране */
+    margin-left: auto;
+    margin-right: auto;
+}
+.location-address {
+    flex: 0 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.12em;
+    font-weight: 600;
+    color: #1976d2;
+    text-align: center;
+    min-height: 100px;
+}
+.location-map {
+    flex: 1 1 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.location-map iframe {
+    width: 100%;
+    max-width: 320px;
+    min-width: 180px;
+    height: 220px;
+    border-radius: 14px;
+    border: 0;
+    box-shadow: 0 2px 16px #0096c722;
+}
+/* ...existing code... */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; /* по-малко разстояние между бутоните */
+    margin-bottom: 0;
+    flex-wrap: nowrap; /* не позволява пренасяне на нов ред */
+    flex-shrink: 1;
+}
+
+nav button, .dropbtn {
+    background: #fff;
+    color: #0096c7;
+    border: 2px solid #0096c7;
+    padding: 4px 10px;      /* по-малък падинг */
+    border-radius: 16px;    /* по-малък радиус */
+    font-size: 0.95em;      /* по-малък шрифт */
+    min-width: 80px;        /* по-малка минимална ширина */
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: none;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    margin: 0 1px;
+}
+/* ...existing code... */
+
+/* Контейнер за снимка и описание */
+.main-intro {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+/* Снимката вляво */
+.main-photo {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,150,199,0.13);
+    margin: 0;
+}
+
+/* Описанието вдясно, в светлосин прозорец с бял текст */
+.main-desc {
+    background: linear-gradient(135deg, #4fc3f7 80%, #0096c7 100%);
+    color: #fff;
+    border-radius: 22px;
+    padding: 28px 28px 22px 28px;
+    font-size: 1.08em;
+    font-weight: 400;
+    box-shadow: 0 2px 16px #0096c733;
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-desc a {
+    color: #fff;
+    text-decoration: underline;
+}
+.main-desc a:hover {
+    color: #e0f7fa;
+}
+
+/* За мобилни устройства – подрежда едно под друго */
+@media (max-width: 900px) {
+    .main-intro {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+    .main-desc {
+        max-width: 100%;
+        padding: 18px 12px 14px 12px;
+    }
+    .main-photo {
+        max-width: 100%;
+    }
+}
+/* ...existing code... */
+.main-intro {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px; /* по-малък gap */
+    margin-bottom: 24px;
+}
+
+.main-photo {
+    max-width: 440px; /* по-голяма снимка */
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,150,199,0.13);
+    margin: 0;
+}
+
+.main-desc {
+    background: linear-gradient(135deg, #4fc3f7 80%, #0096c7 100%);
+    color: #fff;
+    border-radius: 18px;
+    padding: 16px 16px 12px 16px; /* по-малък падинг */
+    font-size: 0.97em;            /* по-малък шрифт */
+    font-weight: 400;
+    box-shadow: 0 2px 16px #0096c733;
+    max-width: 320px;             /* по-тесен правоъгълник */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;             /* по-компактен ред */
+}
+
+.main-desc p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.main-desc a {
+    color: #fff;
+    text-decoration: underline;
+}
+.main-desc a:hover {
+    color: #e0f7fa;
+}
+
+@media (max-width: 900px) {
+    .main-intro {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+    .main-desc {
+        max-width: 100%;
+        padding: 12px 8px 10px 8px;
+    }
+    .main-photo {
+        max-width: 100%;
+    }
+}
+/* ...existing code... */
+.main-desc {
+    background: linear-gradient(135deg, #4fc3f7 80%, #0096c7 100%);
+    color: #f3fbff; /* по-мек бял цвят */
+    border-radius: 18px;
+    padding: 16px 24px 14px 24px;
+    font-size: 1.03em;           /* малко по-голям и четим */
+    font-weight: 400;            /* нормален, не bold */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 16px #0096c733;
+    max-width: 420px;            /* по-широк правоъгълник */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.5;            /* по-мек ред */
+    letter-spacing: 0.01em;
+}
+
+.main-desc p {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.main-desc a {
+    color: #fff;
+    text-decoration: underline;
+}
+.main-desc a:hover {
+    color: #e0f7fa;
+}
+/* ...existing code... */
+.main-desc {
+    background: linear-gradient(135deg, #4fc3f7 80%, #0096c7 100%);
+    color: #f3fbff;
+    border-radius: 18px;
+    padding: 16px 32px 14px 32px;
+    font-size: 0.97em;           /* остава малък и компактен */
+    font-weight: 400;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 16px #0096c733;
+    max-width: 600px;            /* по-широк правоъгълник */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+/* ...existing code... */
+.main-photo {
+    max-width: 440px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,150,199,0.13);
+    margin: 0;
+}
+
+.main-desc {
+    background: linear-gradient(135deg, #4fc3f7 80%, #0096c7 100%);
+    color: #f3fbff;
+    border-radius: 18px;
+    padding: 16px 24px 14px 24px;
+    font-size: 0.97em;
+    font-weight: 400;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-shadow: 0 2px 16px #0096c733;
+    max-width: 440px;   /* същата ширина като снимката */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+/* ...existing code... */
+/* ...existing code... */
+.location-map iframe {
+    width: 100%;
+    max-width: 540px;   /* по-широка карта */
+    min-width: 220px;
+    height: 260px;
+    border-radius: 14px;
+    border: 0;
+    box-shadow: 0 2px 16px #0096c722;
+}
+/* ...existing code... */
+.footer-bottom-flex {
+    background: #e0f7fa; /* бледо син фон */
+    border-top: 1px solid #b2eaff;
+    /* останалите свойства остават */
+}
+/* ...existing code... */
+.footer-bottom-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 4px; /* по-малък хоризонтален gap */
+    background: #e0f7fa;
+    border-top: 1px solid #b2eaff;
+    padding: 14px 0 6px 0;
+    font-size: 0.92em;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+/* ...existing code... */
+.footer-bottom-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0 12px; /* намали хоризонталния gap между менюто и контактите */
+    background: #e0f7fa;
+    border-top: 1px solid #b2eaff;
+    padding: 14px 0 6px 0;
+    font-size: 0.92em;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer-contacts-form {
+    margin-left: 0; /* премахни евентуален ляв margin */
+}
+/* ...existing code... */

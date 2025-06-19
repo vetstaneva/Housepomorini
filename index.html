@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Къща Поморини</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="phones">
+                <a href="tel:+359887802555" class="phone-number">+359 88 780 2555</a>
+                <a href="tel:+359888150746" class="phone-number">+359 88 815 0746</a>
+            </div>
+        </div>
+        <div class="header-content">
+            <h1>
+                <a href="#" class="site-title" onclick="showSection('home')">Къща Поморини</a>
+            </h1>
+            <nav>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('greenhouse'); event.stopPropagation();">Апартамент Грийн Хаус</button>
+                    <div class="dropdown-content" id="dropdown-greenhouse">
+                        <a href="#" onclick="showSection('greenhouse-floor')">Тристаен апартамент</a>
+                        <a href="#" onclick="showSection('greenhouse-two')">Двустаен апартамент</a>
+                        <a href="#" onclick="showSection('greenhouse-double')">Двойна стая</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('redhouse'); event.stopPropagation();">Апартамент Ред Хаус</button>
+                    <div class="dropdown-content" id="dropdown-redhouse">
+                        <a href="#" onclick="showSection('redhouse-floor')">Тристаен апартамент</a>
+                        <a href="#" onclick="showSection('redhouse-two')">Двустаен апартамент</a>
+                        <a href="#" onclick="showSection('redhouse-double')">Двойна стая</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown('panorama'); event.stopPropagation();">Апартамент Панорама</button>
+                    <div class="dropdown-content" id="dropdown-panorama">
+                        <a href="#" onclick="showSection('panorama-two')">Двустаен апартамент</a>
+                        <a href="#" onclick="showSection('panorama-three')">Тройна стая</a>
+                        <a href="#" onclick="showSection('panorama-double')">Двойна стая</a>
+                    </div>
+                </div>
+                <button onclick="showSection('studio-three')">Партерно Студио Слънце</button>
+                <button onclick="showSection('studio-two')">Партерно Студио Зеления кът</button>
+                <div class="dropdown burger-dropdown">
+    <button class="burger-btn contacts-btn" onclick="toggleDropdown('burger'); event.stopPropagation();" aria-label="Още">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+    </button>
+    <div class="dropdown-content burger-content" id="dropdown-burger">
+        <a href="#" onclick="showSection('contacts')">Контакти</a>
+        <a href="#" onclick="showSection('location')">Локация</a>
+        <a href="#" onclick="showSection('common-areas')">Общи части</a>
+        <a href="#" onclick="showSection('entertainment')">Забавления на близо</a>
+        <a href="#" onclick="showSection('accommodation')">Настаняване</a>
+    </div>
+</div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Начална секция -->
+        <section id="home" class="content-section home-center">
+            <h2>Добре дошли в Къща Поморини!</h2>
+            <div class="main-intro">
+                <img src="fasada.jpg" alt="Къщата отвън" class="main-photo">
+                <div class="main-desc">
+                    <p style="margin-bottom:18px;">
+                        <strong>
+                            Почивка в Несебър? Вашето място е тук – Къща Поморини: стилни апартаменти само на 5 минути от плажа!
+                        </strong>
+                        <br><br>
+                        Само няколко крачки ви делят от морето и златния пясък, а при нас ви очакват прохладни, просторни апартаменти, оборудвани с всичко необходимо за една незабравима лятна ваканция. Идеални за семейства, двойки или група приятели – тук ще откриете съчетание от удобство, стил и отлична локация.
+                    </p>
+                    <p>
+                        Къщата е на четири етажа и предлага няколко комфортни апартамента и студиа, проектирани с мисъл за вашия пълен отдих. Тишината на квартала и уютната атмосфера създават перфектни условия за истинска почивка. В близост ще откриете магазини, заведения и всичко необходимо за едно безгрижно лято.
+                    </p>
+                    <p>
+                        Очакваме ви с гостоприемство и усмивка!
+                    </p>
+                </div>
+            </div>
+            <div class="gallery">
+                <img src="dvor1.jpg" alt="Двор 1" class="thumbnail" onclick="openModalGallery('home', 0)">
+                <img src="dvor2.jpg" alt="Двор 2" class="thumbnail" onclick="openModalGallery('home', 1)">
+                <img src="IMG_20230525_143158.jpg" alt="Градина" class="thumbnail" onclick="openModalGallery('home', 2)">
+                <img src="Фасада.jpg" alt="Фасада" class="thumbnail" onclick="openModalGallery('home', 3)">
+                <img src="Фасада_1.jpg" alt="Фасада 1" class="thumbnail" onclick="openModalGallery('home', 4)">
+            </div>
+        </section>
+
+        <!-- Контакти секция -->
+        <!-- ...existing code... -->
+<!-- ...existing code... -->
+<section id="contacts" class="content-section home-center" style="display:none;">
+    <h2>Контакти</h2>
+    <div class="contacts-flexbox-modern">
+        <div class="contacts-phones-modern">
+            <div class="phones-title"><span>Телефон за резервации:</span></div>
+            <a class="phone-number-modern" href="tel:+359887802555">
+                <span class="phone-icon-blue">&#128222;</span> +359 88 780 2555
+            </a>
+            <a class="phone-number-modern" href="tel:+359888150746">
+                <span class="phone-icon-blue">&#128222;</span> +359 88 815 0746
+            </a>
+            <div class="contact-note-bold left-note">
+                <b>Моля, имайте предвид, че в къщата няма постоянно присъствие на персонал. За да направите резервация или да получите допълнителна информация, моля свържете се с нас единствено по телефон или чрез формата за контакт.</b>
+            </div>
+        </div>
+        <form action="mailto:evestaneva@gmail.com" method="POST" enctype="text/plain" class="contact-form-modern small-form">
+            <div class="form-title">Пишете ни</div>
+            <div class="form-row">
+                <input type="text" id="name" name="name" placeholder="Име*" required>
+            </div>
+            <div class="form-row">
+                <input type="text" id="subject" name="subject" placeholder="Тема*" required>
+            </div>
+            <div class="form-row">
+                <input type="text" id="phone" name="phone" placeholder="Телефонен номер*" required>
+            </div>
+            <div class="form-row">
+                <input type="email" id="email" name="email" placeholder="Имейл*" required>
+            </div>
+            <div class="form-row">
+                <textarea id="message" name="message" rows="4" placeholder="Вашето съобщение*" required></textarea>
+            </div>
+            <button type="submit">Изпрати</button>
+        </form>
+    </div>
+</section>
+<!-- ...existing code... -->
+
+        <!-- Грийн Хаус – Тристаен апартамент -->
+        <section id="greenhouse-floor" class="content-section" style="display:none;">
+            <h2>Тристаен апартамент – Грийн Хаус – Първи етаж</h2>
+            <div class="gallery-main">
+                <div class="main-photo-large-wrapper">
+                    <img src="images/Етаж 1/хол_ет1.jpg" alt="Голяма снимка" class="main-photo-large" id="mainGreenhouseImg" onclick="openModalGallery('greenhouse-floor', galleryState['greenhouse-floor'].current)">
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-arrow" onclick="scrollThumbnails('greenhouse-floor', -1)">&lt;</button>
+                    <div class="thumbs-wrapper" id="greenhouseThumbs"></div>
+                    <button class="thumb-arrow" onclick="scrollThumbnails('greenhouse-floor', 1)">&gt;</button>
+                </div>
+            </div>
+            <p>
+                Уютен и прохладен апартамент, разположен на самостоятелен етаж в тих район на Несебър, само на 5 минути пеша от плажа. Подходящ за до 7 възрастни, този апартамент предлага удобство, уединение и всички необходими условия за пълноценна почивка.
+            </p>
+            <p>
+                Разполага с две спални с двойни легла, две отделни бани с тоалетни, разтегателен диван в дневната (200/150 см) и малък разтегателен диван в едната спалня (190/90 см). В дневната и едната спалня има климатици, а във втората – вентилатор.
+            </p>
+            <p>
+                Кухнята е напълно оборудвана с керамичен котлон, халогенна фурна, хладилник с камера, тостер, електрическа кана и всички необходими прибори и съдове. Към апартамента има две тераси – едната с маса и столове за хранене на открито, а другата – по-малка и по-интимна, свързана с една от спалните.
+            </p>
+            <p>
+                Идеален избор за семейства с деца или няколко двойки, които търсят спокойствие, самостоятелност и бърз достъп до плажа и централната част на града.
+            </p>
+            <p>
+                Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+            </p>
+            <p>
+                Апартаментът ви изглежда твърде голям или неподходящ за вашите нужди? Разгледайте другите ни варианти – част от етаж, партерно студио или просто ни се обадете, за да ви предложим най-подходящия вариант на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>.
+            </p>
+        </section>
+
+        <!-- Грийн Хаус – Двустаен апартамент -->
+        <section id="greenhouse-two" class="content-section" style="display:none;">
+            <h2>Грийн Хаус – Двустаен апартамент - Първи етаж</h2>
+            <div class="gallery-main">
+                <div class="main-photo-large-wrapper">
+                    <img src="images/12/IMG_20231021_151917.jpg" alt="Голяма снимка" class="main-photo-large" id="mainGreenhouseTwoImg" onclick="openModalGallery('greenhouse-two', galleryState['greenhouse-two'].current)">
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-arrow" onclick="scrollThumbnails('greenhouse-two', -1)">&lt;</button>
+                    <div class="thumbs-wrapper" id="greenhouseTwoThumbs"></div>
+                    <button class="thumb-arrow" onclick="scrollThumbnails('greenhouse-two', 1)">&gt;</button>
+                </div>
+            </div>
+            <p>
+                Този уютен апартамент е чудесен избор за двойки, семейства с дете или гости, които търсят удобство, спокойствие и близост до морето. Намира се в тиха част на Несебър, само на пет минути пеша от плажа.
+            </p>
+            <p>
+                Апартаментът разполага със самостоятелна спалня с голямо двойно легло, отделна дневна с разтегателен диван и телевизор, самостоятелна баня с тоалетна, както и тераса с маса и столове – идеална за сутрешно кафе или вечеря на открито. Пространството е прохладно дори в най-горещите дни, а климатикът в дневната осигурява допълнителен комфорт.
+            </p>
+            <p>
+                На същия етаж гостите имат достъп до напълно оборудвана кухня, която се споделя с още една стая, ако тя е заета в същия период. Кухнята разполага с керамичен котлон, халогенна фурна, хладилник с камера, тостер, електрическа кана и всички необходими прибори и съдове за готвене и хранене.
+            </p>
+            <p>
+                Дворът на къщата предлага приятна зелена зона с маса и пейки – перфектно място за отдих на открито след плаж или разходка.
+            </p>
+            <p>
+                Търсите повече пространство или предпочитате напълно самостоятелно настаняване? Разгледайте и другите ни възможности – тристайни апартаменти и студиа. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+            </p>
+            <p>
+                Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+            </p>
+            <p>
+                Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+            </p>
+        </section>
+
+        <!-- Грийн Хаус – Двойна стая -->
+        <section id="greenhouse-double" class="content-section" style="display:none;">
+    <h2>Грийн Хаус – Двойна стая - Първи етаж</h2>
+    <div class="gallery-main">
+        <div class="main-photo-large-wrapper">
+            <img src="images/11/viber_image_2025-06-13_09-08-42-469.jpg" alt="Голяма снимка" class="main-photo-large" id="mainGreenhouseDoubleImg" onclick="openModalGallery('greenhouse-double', galleryState['greenhouse-double'].current)">
+        </div>
+        <div class="gallery-thumbnails">
+            <button class="thumb-arrow" onclick="scrollThumbnails('greenhouse-double', -1)">&lt;</button>
+            <div class="thumbs-wrapper" id="greenhouseDoubleThumbs"></div>
+            <button class="thumb-arrow" onclick="scrollThumbnails('greenhouse-double', 1)">&gt;</button>
+        </div>
+    </div>
+    <p>
+        Комфортна и прохладна, тази стая е разположена в спокоен район на Несебър – само на 5 минути пеша от плажа. Идеален избор за двойка с дете или трима приятели, търсещи уют, тишина и удобство близо до морето.
+    </p>
+    <p>
+        Стаята разполага с двойно легло и разтегателен диван (190х90 см). На разположение са самостоятелна баня с тоалетна, телевизор, климатик и малка тераса – приятно място за сутрешно кафе или отдих на открито.
+    </p>
+    <p>
+        Гостите ползват напълно оборудвана кухня, разположена на същия етаж. Тя се споделя единствено със съседната стая, ако тя е заета. В кухнята ще откриете керамичен котлон, халогенна фурна, хладилник с камера, тостер, електрическа кана и всички необходими съдове и прибори.
+    </p>
+    <p>
+        А за допълнителен комфорт – в двора на къщата ви очакват маса с пейки, достъпни за всички гости. Идеално място за вечерен релакс или спокоен старт на деня.
+    </p>
+    <p>
+        Търсите повече пространство или предпочитате напълно самостоятелно настаняване? Разгледайте и другите ни възможности – тристайни апартаменти и студиа. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+    </p>
+    <p>
+        Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+    </p>
+    <p>
+        Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+    </p>
+</section>
+
+        <!-- Ред Хаус – Тристаен апартамент -->
+        <section id="redhouse-floor" class="content-section" style="display:none;">
+            <h2>Тристаен апартамент – Ред Хаус – Втори етаж</h2>
+            <div class="gallery-main">
+                <div class="main-photo-large-wrapper">
+                    <img src="images/Етаж 2/Хол_ет2.jpg" alt="Голяма снимка" class="main-photo-large" id="mainRedhouseFloorImg" onclick="openModalGallery('redhouse-floor', galleryState['redhouse-floor'].current)">
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-arrow" onclick="scrollThumbnails('redhouse-floor', -1)">&lt;</button>
+                    <div class="thumbs-wrapper" id="redhouseFloorThumbs"></div>
+                    <button class="thumb-arrow" onclick="scrollThumbnails('redhouse-floor', 1)">&gt;</button>
+                </div>
+            </div>
+            <p>
+                Слънчев и уютен апартамент, разположен на цял самостоятелен етаж в спокоен район на Несебър, само на 5 минути пеша от плажа. Подходящ за до 6 гости, този апартамент предлага отлична комбинация от удобство, функционалност и близост до морето.
+            </p>
+            <p>
+                Разполага с две спални, всяка с по две единични легла, които могат да се съединят в голямо двойно легло. В дневната има разтегателен диван, удобен за двама. Има две самостоятелни бани с тоалетни – практично решение за семейства или няколко двойки.
+            </p>
+            <p>
+                В апартамента има климатик в дневната и в едната спалня, а другата спалня е оборудвана с вентилатор. Кухнята е компактна, но напълно оборудвана: керамичен котлон, халогенна фурна, хладилник с камера, тостер, електрическа кана и всички необходими прибори и съдове.
+            </p>
+            <p>
+                Към жилището има две тераси – едната, свързана с дневната, е обзаведена с маса и столове и е чудесна за вечеря на открито; другата, към спалнята, е по-интимна и подходяща за сутрешно кафе или отдих.
+            </p>
+            <p>
+                Апартаментът е прохладен дори в най-топлите летни дни и е отличен избор за семейства с деца или приятелски компании, които търсят уют и удобство близо до плажа.
+            </p>
+            <p>
+                Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+            </p>
+            <p>
+                Апартаментът ви изглежда твърде голям или неподходящ за вашите нужди? Разгледайте другите ни варианти – част от етаж, партерно студио или просто ни се обадете, за да ви предложим най-подходящия вариант на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>.
+            </p>
+        </section>
+
+        <!-- Ред Хаус – Двустаен апартамент -->
+        <section id="redhouse-two" class="content-section" style="display:none;">
+            <h2>Ред Хаус – Двустаен апартамент - Втори Етаж</h2>
+            <div class="gallery-main">
+                <div class="main-photo-large-wrapper">
+                    <img src="images/22/Хол_ет2.jpg" alt="Голяма снимка" class="main-photo-large" id="mainRedhouseTwoImg" onclick="openModalGallery('redhouse-two', galleryState['redhouse-two'].current)">
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-arrow" onclick="scrollThumbnails('redhouse-two', -1)">&lt;</button>
+                    <div class="thumbs-wrapper" id="redhouseTwoThumbs"></div>
+                    <button class="thumb-arrow" onclick="scrollThumbnails('redhouse-two', 1)">&gt;</button>
+                </div>
+            </div>
+            <p>
+                Светъл и уютен апартамент, разположен на втори етаж в тиха улица на Несебър, само на няколко минути пеша от плажа. Подходящ е за до четирима възрастни и предлага отлична комбинация от удобство, спокойствие и морска атмосфера.
+            </p>
+            <p>
+                Апартаментът се състои от самостоятелна спалня с две единични легла, които могат да бъдат съединени в комфортно двойно легло (френски тип), просторна дневна с разтегателен диван и телевизор, самостоятелна баня с тоалетна и тераса – чудесна за вечеря на открито или сутрешно кафе. В дневната има климатик, а спалнята е оборудвана с вентилатор за допълнителен комфорт.
+            </p>
+            <p>
+                Гостите ползват напълно оборудвана кухня, разположена на същия етаж. Тя се споделя единствено със съседната стая, ако тя е заета. На разположение са керамичен котлон, халогенна фурна, хладилник с камера, тостер, електрическа кана, съдове и прибори за готвене и хранене.
+            </p>
+            <p>
+                На разположение е и озеленен двор с маса и пейки – идеално място за отдих след плаж или за вечерна среща с близки.
+            </p>
+            <p>
+                Търсите повече пространство или предпочитате напълно самостоятелно настаняване? Разгледайте и другите ни възможности – тристайни апартаменти и студиа. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+            </p>
+            <p>
+                Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+            </p>
+            <p>
+                Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+            </p>
+        </section>
+
+        <!-- Ред Хаус – Двойна стая -->
+        <section id="redhouse-double" class="content-section" style="display:none;">
+    <h2>Ред Хаус – Двойна стая - Втори етаж</h2>
+    <div class="gallery-main">
+        <div class="main-photo-large-wrapper">
+            <img src="images/21/Сп2_ет2.jpg" alt="Голяма снимка" class="main-photo-large" id="mainRedhouseDoubleImg" onclick="openModalGallery('redhouse-double', galleryState['redhouse-double'].current)">
+        </div>
+        <div class="gallery-thumbnails">
+            <button class="thumb-arrow" onclick="scrollThumbnails('redhouse-double', -1)">&lt;</button>
+            <div class="thumbs-wrapper" id="redhouseDoubleThumbs"></div>
+            <button class="thumb-arrow" onclick="scrollThumbnails('redhouse-double', 1)">&gt;</button>
+        </div>
+    </div>
+    <p>
+        Само на 5 минути от морето, в спокоен и зелен квартал на Несебър, тази комфортна стая ви предлага всичко необходимо за една приятна и безгрижна почивка. Идеална за двойка или двама приятели, които търсят тишина, чистота и уют, съчетани с бърз достъп до плажа.
+    </p>
+    <p>
+        Стаята разполага с две единични легла, съединени плътно в удобно френско легло, собствена баня с тоалетна, климатик, телевизор и малка тераса, където можете да започнете деня си с ароматно кафе или да се насладите на вечерния прохладен въздух.
+    </p>
+    <p>
+        На етажа ще откриете и напълно оборудвана кухня, която се споделя единствено със съседната стая, ако тя е заета. Кухнята разполага с керамичен котлон, халогенна фурна, хладилник с камера, тостер, електрическа кана, както и всички нужни съдове и прибори за приготвяне на храна.
+    </p>
+    <p>
+        В двора на къщата ви очаква уютен кът с маса и пейки – чудесно място за вечерен разговор или лека закуска на открито.
+    </p>
+    <p>
+        Търсите повече пространство или предпочитате напълно самостоятелно настаняване? Разгледайте и другите ни възможности – тристайни апартаменти и студиа. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+    </p>
+    <p>
+        Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+    </p>
+    <p>
+        Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+    </p>
+    </section>
+
+        <!-- Двустаен апартамент – Панорама – Трети етаж -->
+        <section id="panorama-two" class="content-section" style="display:none;">
+            <h2>Двустаен апартамент – Панорама – Трети етаж</h2>
+            <div class="gallery-main">
+                <div class="main-photo-large-wrapper">
+                    <img src="images/32/IMG_20230818_123617.jpg" alt="Голяма снимка" class="main-photo-large" id="mainPanoramaTwoImg" onclick="openModalGallery('panorama-two', galleryState['panorama-two'].current)">
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-arrow" onclick="scrollThumbnails('panorama-two', -1)">&lt;</button>
+                    <div class="thumbs-wrapper" id="panoramaTwoThumbs"></div>
+                    <button class="thumb-arrow" onclick="scrollThumbnails('panorama-two', 1)">&gt;</button>
+                </div>
+            </div>
+            <p>
+                Светъл и прохладен апартамент, разположен на самостоятелен етаж в тиха част на Несебър, само на 5 минути пеша от плажа. Подходящ за до 4 възрастни и 1 дете, той съчетава удобство, функционалност и уютна атмосфера.
+            </p>
+            <p>
+                Апартаментът разполага със спалня с двойно легло и собствена баня с тоалетна, както и дневна с две единични легла (с възможност за съединяване в двойно легло), единичен разтегателен диван и втора баня. И двете помещения са оборудвани с телевизори и климатици, а терасите към тях, разкриващи приятна гледка към квартала, са просторни и подходящи за хранене или отдих на открито.
+            </p>
+            <p>
+                Кухненският кът е компактен, но добре оборудван – с керамичен котлон, хладилник с камера, тостер, електрическа кана и всички необходими съдове и прибори.
+            </p>
+            <p>
+                Апартаментът е идеален за семейна ваканция или почивка с приятели, като осигурява самостоятелност, прохлада и бърз достъп до плажа и централната част на града.
+            </p>
+            <p>
+                Апартаментът ви изглежда твърде голям или неподходящ за вашите нужди? Разгледайте другите ни варианти – част от етаж, партерно студио или просто ни се обадете, за да ви предложим най-подходящия вариант на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>.
+            </p>
+            <p>
+                Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+            </p>
+        </section>
+
+        <!-- Панорама – Тройна стая -->
+       <section id="panorama-three" class="content-section" style="display:none;">
+    <h2>Панорама – Тройна стая - Трети етаж</h2>
+    <div class="gallery-main">
+        <div class="main-photo-large-wrapper">
+            <img src="images/32/IMG_20230818_123617.jpg" alt="Голяма снимка" class="main-photo-large" id="mainPanoramaThreeImg" onclick="openModalGallery('panorama-three', galleryState['panorama-three'].current)">
+        </div>
+        <div class="gallery-thumbnails">
+            <button class="thumb-arrow" onclick="scrollThumbnails('panorama-three', -1)">&lt;</button>
+            <div class="thumbs-wrapper" id="panoramaThreeThumbs"></div>
+            <button class="thumb-arrow" onclick="scrollThumbnails('panorama-three', 1)">&gt;</button>
+        </div>
+    </div>
+    <p>
+        Уютно и комфортно студио, разположено на третия етаж в тих район на Несебър, само на 5 минути пеша от плажа. Идеалният избор за трима – две възрастни и дете, които търсят спокойствие, удобства и красиви гледки.
+    </p>
+    <p>
+        Студиото разполага с две единични легла, съединени в голямо двойно легло тип френски, както и разтегателен диван, подходящ за детско легло. Има собствена баня с тоалетна, климатик и телевизор в дневната зона. Просторната тераса е чудесно място за вечеря или почивка с гледка към квартала и околността.
+    </p>
+    <p>
+        Кухнята е напълно оборудвана с керамичен котлон, халогенна фурна, хладилник с камера, тостер и електрическа кана. Тя се споделя с гостите на съседната стая, като винаги можете да готвите удобно и спокойно.
+    </p>
+    <p>
+        На разположение на всички гости в къщата е озеленен двор с маса и пейки – уютно място за сутрешното кафе или вечерен релакс след морето.
+    </p>
+    <p>
+        Търсите повече пространство или предпочитате напълно самостоятелно настаняване? Разгледайте и другите ни възможности – тристайни апартаменти и студиа. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+    </p>
+    <p>
+        Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+    </p>
+    <p>
+        Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+    </p>
+</section>
+        <!-- Панорама – Двойна стая -->
+      <section id="panorama-double" class="content-section" style="display:none;">
+    <h2>Панорама – Двойна стая - Трети етаж</h2>
+    <div class="gallery-main">
+        <div class="main-photo-large-wrapper">
+            <img src="images/31/Сп2_ет2_2.jpg" alt="Голяма снимка" class="main-photo-large" id="mainPanoramaDoubleImg" onclick="openModalGallery('panorama-double', galleryState['panorama-double'].current)">
+        </div>
+        <div class="gallery-thumbnails">
+            <button class="thumb-arrow" onclick="scrollThumbnails('panorama-double', -1)">&lt;</button>
+            <div class="thumbs-wrapper" id="panoramaDoubleThumbs"></div>
+            <button class="thumb-arrow" onclick="scrollThumbnails('panorama-double', 1)">&gt;</button>
+        </div>
+    </div>
+    <p>
+        Тази уютна и светла стая е чудесен избор за двойка или приятели, които търсят спокойствие и комфорт на пешеходно разстояние от морето. Намира се в тиха част на Несебър и предлага всичко необходимо за една приятна почивка.
+    </p>
+    <p>
+        В стаята ще откриете удобно двойно легло, самостоятелна баня с тоалетна, климатик, телевизор, гардероб и маса със столове. Терасата е просторна и разкрива красива панорамна гледка към квартала – чудесно място за романтична вечеря или сутрешно кафе на спокойствие.
+    </p>
+    <p>
+        Гостите имат достъп до напълно оборудвана кухня, която се споделя единствено със съседната стая, ако тя е заета по време на престоя. На разположение са керамичен котлон, хладилник с камера, тостер, електрическа кана и всички нужни съдове и прибори за приготвяне на храна.
+    </p>
+    <p>
+        Мястото съчетава удобство, уют и локация, подходяща както за пълноценна почивка, така и за разходки из града или към близкия плаж.
+    </p>
+    <p>
+        Търсите повече пространство или предпочитате напълно самостоятелно настаняване? Разгледайте и другите ни възможности – тристайни апартаменти и студиа. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+    </p>
+    <p>
+        Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+    </p>
+    <p>
+        Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+    </p>
+</section>
+
+        <!-- Партерно студио за трима -->
+     <section id="studio-three" class="content-section" style="display:none;">
+    <h2>Партерно Студио Слънце</h2>
+    <div class="gallery-main">
+        <div class="main-photo-large-wrapper">
+            <img src="images/Партер голямо/viber_изображение_2024-08-01_12-45-17-749.jpg" alt="Голяма снимка" class="main-photo-large" id="mainStudioThreeImg" onclick="openModalGallery('studio-three', galleryState['studio-three'].current)">
+        </div>
+        <div class="gallery-thumbnails">
+            <button class="thumb-arrow" onclick="scrollThumbnails('studio-three', -1)">&lt;</button>
+            <div class="thumbs-wrapper" id="studioThreeThumbs">
+                <img src="images/Партер голямо/viber_изображение_2024-08-01_12-45-17-749.jpg" class="thumbnail" onclick="openModalGallery('studio-three', 0)">
+                <img src="images/Партер голямо/1.jpg" class="thumbnail" onclick="openModalGallery('studio-three', 1)">
+                <img src="images/Партер голямо/2.jpg" class="thumbnail" onclick="openModalGallery('studio-three', 2)">
+                <img src="images/Партер голямо/3.jpg" class="thumbnail" onclick="openModalGallery('studio-three', 3)">
+                <!-- Добави още снимки, ако имаш -->
+            </div>
+            <button class="thumb-arrow" onclick="scrollThumbnails('studio-three', 1)">&gt;</button>
+        </div>
+    </div>
+    <p>
+        Предлагаме самостоятелно студио, разположено на партерен етаж в къща за гости Поморини – идеално за трима възрастни или двойка с дете, които търсят домашен уют и удобство близо до морето.
+    </p>
+    <p>
+        Студиото разполага с удобно двойно легло и разтегателен диван (190х90 см), самостоятелна баня с тоалетна, напълно оборудвана кухня и пералня – подходящо и за по-дълъг престой. Осигурени са климатик и телевизор за допълнителен комфорт.
+    </p>
+    <p>
+        На разположение е и самостоятелно дворче с маса и пейка – прекрасно място за сутрешно кафе или вечеря на открито.
+    </p>
+    <p>
+        ✨ Тишина, удобство и всичко необходимо за безгрижна почивка – само на няколко минути пеша от плажа и всички удобства на Несебър!
+    </p>
+    <p>
+        Търсите повече пространство или студиото ви изглежда неподходящо за вашите нужди? Разгледайте и другите ни възможности – тристайни и двустайни апартаменти. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+    </p>
+    <p>
+        Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+    </p>
+    <p>
+        Цената се определя индивидуално в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+    </p>
+</section>
+
+        <!-- Партерно студио за двама -->
+       <section id="studio-two" class="content-section" style="display:none;">
+            <h2>Партерно Студио Зеления кът</h2>
+            <div class="gallery-main">
+                <div class="main-photo-large-wrapper">
+                    <img src="images/Партер малко/1.jpg" alt="Голяма снимка" class="main-photo-large" id="mainStudioTwoImg" onclick="openModalGallery('studio-two', galleryState['studio-two'].current)">
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-arrow" onclick="scrollThumbnails('studio-two', -1)">&lt;</button>
+                    <div class="thumbs-wrapper" id="studioTwoThumbs"></div>
+                    <button class="thumb-arrow" onclick="scrollThumbnails('studio-two', 1)">&gt;</button>
+                </div>
+            </div>
+    <p>
+        Предлагаме самостоятелно студио, разположено на партерния етаж на къща за гости Поморини – практично, удобно и напълно оборудвано, с всичко необходимо за спокойна и приятна морска почивка. Подходящо е за двойка с дете или трима възрастни.
+    </p>
+    <p>
+        Вътрешното пространство включва две единични легла, които могат да се съединят в удобно двойно легло, както и диван, превръщащ се в стандартно легло – идеално за дете или трети възрастен. Студиото разполага с оборудвана кухня, пералня и самостоятелна баня с тоалетна, което го прави чудесен избор и за по-дълъг престой.
+    </p>
+    <p>
+        Пред входа има дворче с масичка и столове – приятно място за сутрешно кафе или вечеря на открито в тиха и спокойна атмосфера.
+    </p>
+    <p>
+        ✨ Перфектна комбинация от удобство и функционалност – само на няколко минути пеша от плажа!
+    </p>
+    <p>
+        Търсите повече пространство или студиото ви изглежда неподходящо за вашите нужди? Разгледайте и другите ни възможности – тристайни и двустайни апартаменти. Ще ви помогнем да откриете най-подходящото място за вашата почивка.
+    </p>
+    <p>
+        Свържете се с нас на <a href="tel:+359887802555">088 780 2555</a> или <a href="tel:+359888150746">088 815 0746</a>, за да получите персонално предложение спрямо вашите нужди.
+    </p>
+    <p>
+        Цената се определя в зависимост от периода и броя на нощувките. За точна оферта, моля, обадете се директно.
+    </p>
+</section>
+
+<section id="common-areas" class="content-section" style="display:none;">
+    <h2>Общи части</h2>
+    <p>
+        Къщата представлява четириетажна сграда, предлагаща удобни възможности за настаняване както за двойки, така и за семейства или по-големи групи.
+    </p>
+    <p>
+        На партерния етаж се намират две студиа със самостоятелен вход директно от улицата. Всяко студио разполага със собствена обособена външна зона с места за почивка – идеални за сутрешно кафе или вечерна почивка на открито.
+    </p>
+    <p>
+        До апартаментите на горните етажи се стига през страничен вход и общо вътрешно стълбище, което обслужва всички етажи. За удобство на гостите, отседнали в апартаментите, в задния двор е обособена зона с маса и пейки, подходяща за хранене на открито или спокойни моменти сред тишината на двора.
+    </p>
+    <div class="gallery-main">
+        <div class="gallery-thumbnails small-thumbs">
+            <img src="Фасада_1.jpg" alt="Фасада 1" class="thumbnail small-thumbnail" onclick="openModalGallery('common-areas', 0)">
+            <img src="7.jpg" alt="Двор" class="thumbnail small-thumbnail" onclick="openModalGallery('common-areas', 1)">
+            <img src="dvor2.jpg" alt="Двор 2" class="thumbnail small-thumbnail" onclick="openModalGallery('common-areas', 2)">
+            <img src="viber_изображение_2024-06-28_09-00-03-679.jpg" alt="Външна зона 1" class="thumbnail small-thumbnail" onclick="openModalGallery('common-areas', 3)">
+            <img src="viber_изображение_2024-06-28_09-01-11-304.jpg" alt="Външна зона 2" class="thumbnail small-thumbnail" onclick="openModalGallery('common-areas', 4)">
+        </div>
+    </div>
+</section>
+        <!-- Допълнителни секции -->
+    <section id="location" class="content-section" style="display:none;">
+    <h2>Локация</h2>
+    <div class="location-flex-row">
+        <div class="location-address">
+            <strong>Адрес:</strong><br>
+            Несебър, квартал Черно Море 3, №31
+        </div>
+       <div class="location-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2135.7939363650457!2d27.703526799999995!3d42.6543894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a69f2ed1490e15%3A0x8569057667a29834!2z0JrRitGJ0LAg0LfQsCDQs9C-0YHRgtC4ICLQn9C-0LzQvtGA0LjQvdC4Ig!5e1!3m2!1sen!2sbg!4v1750077674379!5m2!1sen!2sbg"
+        width="600"
+        height="320"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    </div>
+    <span class="location-title">
+        Как да стигнем до къщата?
+    </span>
+    <div class="how-btns-vertical">
+        <button class="how-btn-vertical" onclick="showTravelInfoVertical('car', this)">Ако пътувате с кола</button>
+        <div id="travel-info-car" class="travel-info-section-vertical" style="display:none;">
+            <div class="travel-info-row">
+                <div class="travel-info-text">
+                    Можете да ни потърсите в Google – ще ви излезем като Къща за гости "Поморини".<br>
+                    Напишете <strong>31, кв. Черно Море 3, 8230 Nessebar</strong> или цъкнете локацията, която ще ви препрати към Google Maps:<br>
+                    <a href="https://maps.app.goo.gl/f78LKohzWcXJHnzc6" target="_blank" style="color:#1976d2; text-decoration:underline;">Отвори локацията в Google Maps</a>
+                </div>
+                <div class="travel-info-gallery">
+                    <!-- Ако имаш снимки за този бутон, добави ги тук -->
+                </div>
+            </div>
+        </div>
+        <button class="how-btn-vertical" onclick="showTravelInfoVertical('bus', this)">Ако пътувате с автобус</button>
+        <div id="travel-info-bus" class="travel-info-section-vertical" style="display:none;">
+            <div class="travel-info-row">
+                <div class="travel-info-text">
+                    За пристигащи от Бургас с автобус – на автогара Юг вземете автобус №10 (Бургас-РАВДА-Несебър) и слезте в Несебър на спирка №36А - Academic.<br>
+                    <a href="https://burgasbus.info/burgasbus/?page_id=358" target="_blank" style="color:#1976d2; text-decoration:underline;">Вижте актуалното разписание на автобуса</a>
+                </div>
+                <div class="travel-info-gallery">
+                    <img src="viber_изображение_2022-07-28_15-50-43-373.jpg" alt="Автобусна спирка" class="travel-thumb" onclick="openModalGallery('bus', 0)">
+                </div>
+            </div>
+        </div>
+        <button class="how-btn-vertical" onclick="showTravelInfoVertical('plane', this)">Ако пътувате със самолет</button>
+        <div id="travel-info-plane" class="travel-info-section-vertical" style="display:none;">
+            <div class="travel-info-row">
+                <div class="travel-info-text">
+                    За пристигащите със самолет – на 50м от изхода на летището вземете автобус №10 (Бургас-РАВДА-Несебър) от спирката, намираща се на входа на паркинга, и слезте в Несебър на спирка №36А - Academic.<br>
+                    <a href="https://burgasbus.info/burgasbus/?page_id=358" target="_blank" style="color:#1976d2; text-decoration:underline;">Вижте актуалното разписание на автобуса</a>
+                </div>
+                <div class="travel-info-gallery">
+                    <img src="1655734539020.jpg" alt="Летище 1" class="travel-thumb" onclick="openModalGallery('plane', 0)">
+                    <img src="1655734539012.jpg" alt="Летище 2" class="travel-thumb" onclick="openModalGallery('plane', 1)">
+                    <img src="viber_изображение_2022-07-28_15-50-43-373.jpg" alt="Автобусна спирка" class="travel-thumb" onclick="openModalGallery('plane', 2)">
+                </div>
+            </div>
+        </div>
+        </section>
+<section id="entertainment" class="content-section" style="display:none;">
+    <h2>Забавления около къщата</h2>
+    <p>
+        <b>Добре дошли в Несебър!</b><br>
+        Нашата къща се намира в тих и удобен квартал – Черно море 3 №31, само на няколко минути пеша от плажа, хранителни магазини и забележителности. За да направим престоя ви още по-приятен, подбрахме някои от най-интересните и полезни места в близост:
+    </p>
+    <div class="how-btns-vertical">
+        <button class="how-btn-vertical" onclick="showEntertainmentInfo('beach', this)">Плажове и отдих</button>
+        <div id="entertainment-info-beach" class="travel-info-section-vertical" style="display:none;">
+            <b>Плажове и отдих</b>
+            <ul style="text-align:left; margin-top:12px;">
+                <li>
+                    <b>Плаж РИЧ</b> – 5 мин пеш<br>
+                    Чист и поддържан плаж с бар, басейн и спокойна атмосфера. Идеален за релакс.<br>
+                    <a href="https://maps.app.goo.gl/imrCEvrF3HBPjgde8" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Плаж НСА</b> – 15 мин пеш<br>
+                    Малък, тих и закътан плаж с фин пясък и чиста вода. Подходящ за спокойствие и отдих.<br>
+                    <a href="https://maps.app.goo.gl/E5rDzTEA6qa2A7gQ8" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Южен плаж Несебър</b> – 3 мин с кола<br>
+                    Широк пясъчен плаж с удобства, подходящ за семейства и дълги разходки.<br>
+                    <a href="https://maps.app.goo.gl/HKJZWnidjFt2aFqP7" target="_blank">Виж на картата</a>
+                </li>
+            </ul>
+        </div>
+        <button class="how-btn-vertical" onclick="showEntertainmentInfo('shops', this)">Магазини и услуги</button>
+        <div id="entertainment-info-shops" class="travel-info-section-vertical" style="display:none;">
+            <b>Магазини и услуги</b>
+            <ul style="text-align:left; margin-top:12px;">
+                <li>
+                    <b>VIVI Market</b> – на 100 м<br>
+                    Удобен квартален супермаркет с всичко от първа нужда.<br>
+                    <a href="https://maps.app.goo.gl/4xZ5C9S6dgwnqZsf6" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Баничарница Черно Море</b> – на 250м<br>
+                    Вкусни закуски за всеки.<br>
+                    <a href="https://maps.app.goo.gl/v2xNrrK6oPCd5xQ3A" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Хипермаркет „Жанет“</b> – 4 мин с кола<br>
+                    Голям хипермаркет с всичко необходимо.<br>
+                    <a href="https://maps.app.goo.gl/NpduXe9Dx6F54BS49" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Cafechino coffee</b> – на 200м<br>
+                    Кокетно квартално кафене.<br>
+                    <a href="https://maps.app.goo.gl/y7LsembSMQtem7vQ9" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Пералня на Самообслужване Черно Море</b> – на 250м<br>
+                    Пране на дрехи – удобно при по-дълъг престой.<br>
+                    <a href="https://maps.app.goo.gl/f5XPwPP1dYHP692H7" target="_blank">Виж на картата</a>
+                </li>
+            </ul>
+        </div>
+        <button class="how-btn-vertical" onclick="showEntertainmentInfo('history', this)">Исторически забележителности</button>
+        <div id="entertainment-info-history" class="travel-info-section-vertical" style="display:none;">
+            <b>Исторически забележителности</b>
+            <ul style="text-align:left; margin-top:12px;">
+                <li>
+                    <b>Старият град на Несебър</b> – на 6 мин с кола<br>
+                    ЮНЕСКО културно наследство – калдъръмени улички, над 40 църкви, реставрирани къщи от Възраждането, уютни ресторантчета и арт магазини.<br>
+                    <a href="https://maps.app.goo.gl/DaqYsuiBuJnWfk2E8" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Църква „Света София“</b> – В Стария град<br>
+                    Позната като Старата митрополия – внушителна базилика от V–VI век. Частично запазени стени и колони, впечатляваща атмосфера.<br>
+                    <a href="https://maps.app.goo.gl/tXNWWn1hkMckww6A6" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Археологически музей</b> – В Стария град<br>
+                    Експозиции от древна Тракия, Рим и Средновековието. Подходящ за кратка и вдъхновяваща обиколка.<br>
+                    <a href="https://maps.app.goo.gl/ru8J4zrmaZ6gV53o8" target="_blank">Виж на картата</a>
+                </li>
+            </ul>
+        </div>
+        <button class="how-btn-vertical" onclick="showEntertainmentInfo('fun', this)">Забавления за деца и възрастни</button>
+        <div id="entertainment-info-fun" class="travel-info-section-vertical" style="display:none;">
+            <b>Забавления за деца и възрастни</b>
+            <ul style="text-align:left; margin-top:12px;">
+                <li>
+                    <b>Аквапарк „Aqua Paradise“</b> – 8 мин с кола<br>
+                    Най-големият воден парк в България! Над 20 пързалки, басейни, мързелива река и шоу програми. Безплатен трансфер от определени точки в града.<br>
+                    <a href="https://maps.app.goo.gl/x4TDWnYW2prh6ftp7" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Морски аквариум "Свети Никола"</b> – 8 мин с кола<br>
+                    Малък, но интересен аквариум с черноморски и тропически риби. Подходящ за деца.<br>
+                    <a href="https://maps.app.goo.gl/EcC7pgcE1AejXU6v9" target="_blank">Виж на картата</a>
+                </li>
+                <li style="margin-top:10px;">
+                    <b>Открити игрища и фитнес на открито</b> – парк „Черно море“ – 5 мин пеш<br>
+                    Футбол, баскетбол, волейбол, тенис на маса, фитнес на открито – общинска зона.<br>
+                    <a href="https://maps.app.goo.gl/2KavkN54UmorGJ9y5" target="_blank">Виж на картата</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>  
+      <section id="accommodation" class="content-section" style="display:none;">
+    <h2>Настаняване</h2>
+    <p>
+        Настаняването в къщата се извършва самостоятелно от гостите, без необходимост от посрещане на място. На разположение няма постоянно присъствие на персонал, което ви дава пълна свобода и гъвкавост – можете да се настаните по всяко време на денонощието, в удобно за вас време.
+    </p>
+    <p>
+        Подробни инструкции за достъп ще получите след потвърждение на вашата резервация.
+    </p>
+</section>
+    </main>
+
+    <!-- Модал за голяма снимка със стрелки -->
+   <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="arrow left" onclick="event.stopPropagation(); prevModalImg();">&#10094;</span>
+        <img class="modal-content" id="modal-img">
+        <span class="arrow right" onclick="event.stopPropagation(); nextModalImg();">&#10095;</span>
+    </div>
+
+   <footer>
+    <div class="footer-bottom-flex">
+        <div class="footer-menu">
+            <div class="footer-menu-col">
+                <span>Грийн Хаус</span>
+                <ul>
+                    <li><a href="#" onclick="showSection('greenhouse-floor')">Тристаен апартамент</a></li>
+                    <li><a href="#" onclick="showSection('greenhouse-two')">Двустаен апартамент</a></li>
+                    <li><a href="#" onclick="showSection('greenhouse-double')">Двойна стая</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu-col">
+                <span>Ред Хаус</span>
+                <ul>
+                    <li><a href="#" onclick="showSection('redhouse-floor')">Тристаен апартамент</a></li>
+                    <li><a href="#" onclick="showSection('redhouse-two')">Двустаен апартамент</a></li>
+                    <li><a href="#" onclick="showSection('redhouse-double')">Двойна стая</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu-col">
+                <span>Панорама</span>
+                <ul>
+                    <li><a href="#" onclick="showSection('panorama-two')">Двустаен апартамент</a></li>
+                    <li><a href="#" onclick="showSection('panorama-three')">Тройна стая</a></li>
+                    <li><a href="#" onclick="showSection('panorama-double')">Двойна стая</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu-col">
+                <span>Студиа</span>
+                <ul>
+                    <li><a href="#" onclick="showSection('studio-three')">Студио Слънце</a></li>
+                    <li><a href="#" onclick="showSection('studio-two')">Студио Зеления кът</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu-col">
+                <span>Още</span>
+                <ul>
+                    <li><a href="#" onclick="showSection('common-areas')">Общи части</a></li>
+                    <li><a href="#" onclick="showSection('location')">Локация</a></li>
+                    <li><a href="#" onclick="showSection('entertainment')">Забавления</a></li>
+                    <li><a href="#" onclick="showSection('accommodation')">Настаняване</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-contacts-form">
+            <div class="footer-contacts">
+                <h3>Телефони</h3>
+                <a href="tel:+359887802555">+359 88 780 2555</a>
+                <a href="tel:+359888150746">+359 88 815 0746</a>
+                <div class="footer-fb-link">
+                    <a href="https://www.facebook.com/share/15fTZPEdKz/" class="footer-fb" target="_blank" title="Facebook">
+                        <img src="facebook logo.png" alt="Facebook" class="footer-fb-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-contact-form">
+                <h3>Пишете ни</h3>
+                <form action="mailto:evestaneva@gmail.com" method="POST" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Име*" required>
+                    <input type="text" name="subject" placeholder="Тема*" required>
+                    <input type="text" name="phone" placeholder="Телефон*" required>
+                    <input type="email" name="email" placeholder="Имейл*" required>
+                    <textarea name="message" rows="2" placeholder="Вашето съобщение*" required></textarea>
+                    <button type="submit">Изпрати</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy-row">
+        <span class="footer-copy">&copy; 2025 Къща Поморини</span>
+    </div>
+</footer>
+ <script src="script.js"></script>
+</body>
+</html>
