@@ -18,48 +18,51 @@
             <h1>
                 <a href="#" class="site-title" onclick="showSection('home')">Къща Поморини</a>
             </h1>
-            <nav>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('greenhouse'); event.stopPropagation();">Апартамент Грийн Хаус</button>
-                    <div class="dropdown-content" id="dropdown-greenhouse">
-                        <a href="#" onclick="showSection('greenhouse-floor')">Тристаен апартамент</a>
-                        <a href="#" onclick="showSection('greenhouse-two')">Двустаен апартамент</a>
-                        <a href="#" onclick="showSection('greenhouse-double')">Двойна стая</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('redhouse'); event.stopPropagation();">Апартамент Ред Хаус</button>
-                    <div class="dropdown-content" id="dropdown-redhouse">
-                        <a href="#" onclick="showSection('redhouse-floor')">Тристаен апартамент</a>
-                        <a href="#" onclick="showSection('redhouse-two')">Двустаен апартамент</a>
-                        <a href="#" onclick="showSection('redhouse-double')">Двойна стая</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn" onclick="toggleDropdown('panorama'); event.stopPropagation();">Апартамент Панорама</button>
-                    <div class="dropdown-content" id="dropdown-panorama">
-                        <a href="#" onclick="showSection('panorama-two')">Двустаен апартамент</a>
-                        <a href="#" onclick="showSection('panorama-three')">Тройна стая</a>
-                        <a href="#" onclick="showSection('panorama-double')">Двойна стая</a>
-                    </div>
-                </div>
-                <button onclick="showSection('studio-three')">Партерно Студио Слънце</button>
-                <button onclick="showSection('studio-two')">Партерно Студио Зеления кът</button>
-                <div class="dropdown burger-dropdown">
-    <button class="burger-btn contacts-btn" onclick="toggleDropdown('burger'); event.stopPropagation();" aria-label="Още">
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-        <span class="burger-line"></span>
-    </button>
-    <div class="dropdown-content burger-content" id="dropdown-burger">
-        <a href="#" onclick="showSection('contacts')">Контакти</a>
-        <a href="#" onclick="showSection('location')">Локация</a>
-        <a href="#" onclick="showSection('common-areas')">Общи части</a>
-        <a href="#" onclick="showSection('entertainment')">Забавления на близо</a>
-        <a href="#" onclick="showSection('accommodation')">Настаняване</a>
+            <!-- Добави това преди <nav> -->
+
+<!-- Основно меню с клас main-menu -->
+<nav class="main-menu">
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleDropdown('greenhouse'); event.stopPropagation();">Апартамент Грийн Хаус</button>
+    <div class="dropdown-content" id="dropdown-greenhouse">
+      <a href="#" onclick="showSection('greenhouse-floor')">Тристаен апартамент</a>
+      <a href="#" onclick="showSection('greenhouse-two')">Двустаен апартамент</a>
+      <a href="#" onclick="showSection('greenhouse-double')">Двойна стая</a>
     </div>
-</div>
-            </nav>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleDropdown('redhouse'); event.stopPropagation();">Апартамент Ред Хаус</button>
+    <div class="dropdown-content" id="dropdown-redhouse">
+      <a href="#" onclick="showSection('redhouse-floor')">Тристаен апартамент</a>
+      <a href="#" onclick="showSection('redhouse-two')">Двустаен апартамент</a>
+      <a href="#" onclick="showSection('redhouse-double')">Двойна стая</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" onclick="toggleDropdown('panorama'); event.stopPropagation();">Апартамент Панорама</button>
+    <div class="dropdown-content" id="dropdown-panorama">
+      <a href="#" onclick="showSection('panorama-two')">Двустаен апартамент</a>
+      <a href="#" onclick="showSection('panorama-three')">Тройна стая</a>
+      <a href="#" onclick="showSection('panorama-double')">Двойна стая</a>
+    </div>
+  </div>
+  <button onclick="showSection('studio-three')">Партерно Студио Слънце</button>
+  <button onclick="showSection('studio-two')">Партерно Студио Зеления кът</button>
+  <div class="dropdown burger-dropdown">
+  <button class="burger-btn dropbtn" onclick="toggleDropdown('burger'); event.stopPropagation();" aria-label="Още">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
+    <div class="dropdown-content burger-content" id="dropdown-burger">
+      <a href="#" onclick="showSection('contacts')">Контакти</a>
+      <a href="#" onclick="showSection('location')">Локация</a>
+      <a href="#" onclick="showSection('common-areas')">Общи части</a>
+      <a href="#" onclick="showSection('entertainment')">Забавления на близо</a>
+      <a href="#" onclick="showSection('accommodation')">Настаняване</a>
+    </div>
+  </div>
+</nav>
         </div>
     </header>
 
@@ -726,7 +729,6 @@
     </p>
 </section>
     </main>
-
     <!-- Модал за голяма снимка със стрелки -->
    <div id="modal" class="modal" onclick="closeModal()">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -734,7 +736,6 @@
         <img class="modal-content" id="modal-img">
         <span class="arrow right" onclick="event.stopPropagation(); nextModalImg();">&#10095;</span>
     </div>
-
    <footer>
     <div class="footer-bottom-flex">
         <div class="footer-menu">

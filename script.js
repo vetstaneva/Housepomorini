@@ -431,3 +431,17 @@ function applyTranslations() {
     document.querySelector("#contacts h2").innerText = translations[currentLang].contacts;
     // ...добави всички елементи, които искаш да се превеждат
 }
+// ...existing code...
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ...твоята инициализация...
+
+    // Бургер меню за мобилно
+    const burgerBtn = document.querySelector('.burger-btn');
+    const mainMenu = document.querySelector('.main-menu');
+    if (burgerBtn && mainMenu) {
+        burgerBtn.addEventListener('click', function() {
+            mainMenu.classList.toggle('active');
+        });
+    }
+});
