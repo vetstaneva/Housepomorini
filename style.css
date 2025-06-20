@@ -2048,3 +2048,53 @@ nav button:hover, .dropbtn:hover {
     display: block !important;
   }
 }
+/* Homepage gallery: horizontal scroll on mobile */
+@media (max-width: 700px) {
+  .homepage-gallery {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 8px;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .homepage-gallery .thumbnail {
+    flex: 0 0 auto !important;
+    width: 120px !important;
+    height: auto !important;
+    max-height: 90px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+}
+/* Mobile: thumbnails in .homepage-gallery fit in one row without scrolling */
+/* ...existing code... */
+/* ...existing code... */
+
+/* Още по-малки thumbnails само за началната страница на мобилни устройства */
+@media (max-width: 600px) {
+  .homepage-gallery {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+  }
+  .homepage-gallery .thumbnail {
+    width: 14vw !important;      /* Намалено още */
+    max-width: 14vw !important;
+    min-width: 0 !important;
+    max-height: 16vw !important;
+    height: auto !important;
+    margin: 0 1vw !important;
+    object-fit: cover !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Ако имаш повече от 7 thumbnails, намали width още (пример: 12vw) */
