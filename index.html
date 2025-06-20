@@ -21,7 +21,77 @@
             <!-- Добави това преди <nav> -->
 
 <!-- Основно меню с клас main-menu -->
+<!-- Само за мобилно, скрито на десктоп с @media -->
+<div class="mobile-menu">
+  <button class="burger-btn" onclick="toggleDropdown('mobile-burger')" aria-label="Меню">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
+  <div class="dropdown-content" id="dropdown-mobile-burger">
+    <a href="#" onclick="showSection('home')">Начало</a>
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown('mobile-greenhouse'); event.stopPropagation();">Апартамент Грийн Хаус</button>
+      <div class="dropdown-content" id="dropdown-mobile-greenhouse">
+        <a href="#" onclick="showSection('greenhouse-floor')">Тристаен апартамент</a>
+        <a href="#" onclick="showSection('greenhouse-two')">Двустаен апартамент</a>
+        <a href="#" onclick="showSection('greenhouse-double')">Двойна стая</a>
+      </div>
+    </div>
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown('mobile-redhouse'); event.stopPropagation();">Апартамент Ред Хаус</button>
+      <div class="dropdown-content" id="dropdown-mobile-redhouse">
+        <a href="#" onclick="showSection('redhouse-floor')">Тристаен апартамент</a>
+        <a href="#" onclick="showSection('redhouse-two')">Двустаен апартамент</a>
+        <a href="#" onclick="showSection('redhouse-double')">Двойна стая</a>
+      </div>
+    </div>
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown('mobile-panorama'); event.stopPropagation();">Апартамент Панорама</button>
+      <div class="dropdown-content" id="dropdown-mobile-panorama">
+        <a href="#" onclick="showSection('panorama-two')">Двустаен апартамент</a>
+        <a href="#" onclick="showSection('panorama-three')">Тройна стая</a>
+        <a href="#" onclick="showSection('panorama-double')">Двойна стая</a>
+      </div>
+    </div>
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown('mobile-studio-three'); event.stopPropagation();">Партерно Студио Слънце</button>
+      <div class="dropdown-content" id="dropdown-mobile-studio-three">
+        <a href="#" onclick="showSection('studio-three')">Галерия и описание</a>
+        <!-- Ако имаш още подменюта за това студио, добави ги тук -->
+      </div>
+    </div>
+    
+    <!-- ...existing code... -->
+<div class="dropdown">
+  <button class="dropbtn" onclick="showSection('studio-two'); event.stopPropagation();">Партерно Студио Зеления кът</button>
+</div>
+<!-- ...existing code... -->
+    
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown('mobile-more'); event.stopPropagation();">Още</button>
+      <div class="dropdown-content" id="dropdown-mobile-more">
+        <a href="#" onclick="showSection('contacts')">Контакти</a>
+        <a href="#" onclick="showSection('location')">Локация</a>
+        <a href="#" onclick="showSection('common-areas')">Общи части</a>
+        <a href="#" onclick="showSection('entertainment')">Забавления на близо</a>
+        <a href="#" onclick="showSection('accommodation')">Настаняване</a>
+      </div>
+    </div>
+  </div>
+</div>
 <nav class="main-menu">
+    <a href="#" class="home-btn" onclick="showSection('home')" aria-label="Начало">
+  <svg width="32" height="32" viewBox="0 0 32 32">
+    <circle cx="16" cy="16" r="16" fill="#0096c7"/>
+    <path d="M10 18V14.5L16 10L22 14.5V18C22 18.55 21.55 19 21 19H11C10.45 19 10 18.55 10 18Z" fill="#fff"/>
+    <rect x="14" y="16" width="4" height="5" rx="1" fill="#0096c7"/>
+  </svg>
+</a>
   <div class="dropdown">
     <button class="dropbtn" onclick="toggleDropdown('greenhouse'); event.stopPropagation();">Апартамент Грийн Хаус</button>
     <div class="dropdown-content" id="dropdown-greenhouse">

@@ -262,10 +262,10 @@ function nextModalImg() {
     window.currentModalIdx = idx;
 }
 
-// Скриване на падащи менюта при клик извън тях
+// Скриване на падащи менюта при клик извън тях (само за десктоп)
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn') && !event.target.classList.contains('burger-btn')) {
-        document.querySelectorAll('.dropdown-content').forEach(menu => menu.classList.remove('show'));
+        document.querySelectorAll('.main-menu .dropdown-content').forEach(menu => menu.classList.remove('show'));
     }
 };
 
@@ -291,13 +291,6 @@ function showSection(sectionId) {
         setMainGalleryImg(sectionId, galleryState[sectionId].current || 0);
         renderGalleryThumbs(sectionId);
     }
-}
-
-// Падащи менюта
-function toggleDropdown(name) {
-    document.querySelectorAll('.dropdown-content').forEach(menu => menu.classList.remove('show'));
-    const dropdown = document.getElementById('dropdown-' + name);
-    if (dropdown) dropdown.classList.toggle('show');
 }
 
 // Помощни функции за id-та
@@ -431,12 +424,9 @@ function applyTranslations() {
     document.querySelector("#contacts h2").innerText = translations[currentLang].contacts;
     // ...добави всички елементи, които искаш да се превеждат
 }
-// ...existing code...
 
+// --- Десктоп бургер и подменю (НЕ пипай) ---
 document.addEventListener('DOMContentLoaded', function() {
-    // ...твоята инициализация...
-
-    // Бургер меню за мобилно
     const burgerBtn = document.querySelector('.burger-btn');
     const mainMenu = document.querySelector('.main-menu');
     if (burgerBtn && mainMenu) {
@@ -444,4 +434,110 @@ document.addEventListener('DOMContentLoaded', function() {
             mainMenu.classList.toggle('active');
         });
     }
+});
+
+// --- MOBILE MENU LOGIC ---
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Мобилен бургер бутон и основно меню
+    const burgerBtn = document.querySelector('.mobile-menu .burger-btn');
+    const mobileMenu = document.querySelector('.mobile-menu .dropdown-content#dropdown-mobile-burger');
+    if (burgerBtn && mobileMenu) {
+        burgerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('show');
+            // Затвори всички подменюта при затваряне на основното меню
+            if (!mobileMenu.classList.contains('show')) {
+                document.querySelectorAll('.mobile-menu .dropdown-content').forEach(menu => {
+                    if (menu !== mobileMenu) menu.classList.remove('show');
+                });
+            }
+        });
+    }
+
+    // Клик извън мобилното меню затваря всички подменюта (без основното)
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.mobile-menu')) {
+            document.querySelectorAll('.mobile-menu .dropdown-content').forEach(menu => {
+                if (menu.id !== 'dropdown-mobile-burger') menu.classList.remove('show');
+            });
+        }
+    });
+
+    // Само едно подменю да е отворено в мобилното меню
+    document.querySelectorAll('.mobile-menu .dropbtn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Ако има data-dropdown, вземи името от него, иначе парсни от onclick
+            let name = btn.dataset.dropdown;
+            if (!name && btn.getAttribute('onclick')) {
+                const match = btn.getAttribute('onclick').match(/toggleDropdown\('([^']+)'/);
+                if (match) name = match[1];
+            }
+            if (!name) return;
+            document.querySelectorAll('.mobile-menu .dropdown-content').forEach(menu => {
+                if (menu.id !== 'dropdown-' + name && menu.id !== 'dropdown-mobile-burger') menu.classList.remove('show');
+            });
+            const dropdown = document.getElementById('dropdown-' + name);
+            if (dropdown) dropdown.classList.toggle('show');
+        });
+    });
+});
+
+// Унифицирана функция за подменюта (работи и за десктоп и мобилно)
+function toggleDropdown(name) {
+    // Ако е мобилно меню
+    if (window.innerWidth <= 900 && name.startsWith('mobile-')) {
+        document.querySelectorAll('.mobile-menu .dropdown-content').forEach(menu => {
+            if (menu.id !== 'dropdown-' + name && menu.id !== 'dropdown-mobile-burger') menu.classList.remove('show');
+        });
+        const dropdown = document.getElementById('dropdown-' + name);
+        if (dropdown) dropdown.classList.toggle('show');
+    } else {
+        // Десктоп
+        document.querySelectorAll('.main-menu .dropdown-content').forEach(menu => {
+            if (menu.id !== 'dropdown-' + name) menu.classList.remove('show');
+        });
+        const dropdown = document.getElementById('dropdown-' + name);
+        if (dropdown) dropdown.classList.toggle('show');
+    }
+}
+// Мобилен бургер бутон и подменюта
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Мобилен бургер бутон (примерен селектор, смени ако е различен)
+  const mobileBurger = document.querySelector('.mobile-menu .burger-btn');
+  const mobileMenu = document.querySelector('.mobile-menu .dropdown-content');
+
+  if (mobileBurger && mobileMenu) {
+    mobileBurger.addEventListener('click', function () {
+      mobileMenu.classList.toggle('show');
+    });
+
+    // Скриване на менюто при клик извън него
+    document.addEventListener('click', function (e) {
+      if (!mobileMenu.contains(e.target) && !mobileBurger.contains(e.target)) {
+        mobileMenu.classList.remove('show');
+      }
+    });
+  }
+
+  // Подменюта в мобилното меню (ако имаш dropbtn вътре)
+  const mobileDropdowns = document.querySelectorAll('.mobile-menu .dropdown');
+  mobileDropdowns.forEach(function (dropdown) {
+    const btn = dropdown.querySelector('.dropbtn');
+    const content = dropdown.querySelector('.dropdown-content');
+    if (btn && content) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        content.classList.toggle('show');
+      });
+      // Скриване на подменюто при клик извън него
+      document.addEventListener('click', function (e) {
+        if (!dropdown.contains(e.target)) {
+          content.classList.remove('show');
+        }
+      });
+    }
+  });
 });
