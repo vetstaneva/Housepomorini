@@ -8,6 +8,8 @@ const galleries = {
         "images/Етаж 1/viber_изображение_2024-06-28_08-56-45-505.jpg",
         "images/Етаж 1/viber_image_2025-06-13_09-08-42-469.jpg",
         "images/Етаж 1/viber_image_2025-06-13_09-09-23-880.jpg",
+        "images/12/spalnq 1.jpeg",
+        "images/12/spalnq 2.jpeg",
         "images/Етаж 1/IMG_20210615_130438.jpg",
         "images/Етаж 1/IMG_20220602_104110.jpg",
         "images/Етаж 1/IMG_20190519_150130.jpg",
@@ -20,17 +22,20 @@ const galleries = {
         "images/12/хол_ет1.jpg",
         "images/12/хол_ет1_2.jpg",
         "images/12/хол_ет1_3.jpg",
-        "images/12/Спалня ап2.jpg",
+        "images/12/spalnq 1.jpeg",
+        "images/12/spalnq 2.jpeg",
         "images/12/viber_изображение_2022-07-28_15-49-48-792.jpg",
         "images/12/IMG_20210615_130438.jpg",
-        "images/12/IMG_20190519_150130.jpg"
+        "images/12/IMG_20190519_150130.jpg",
+        "images/12/vrata.jpeg"
     ],
     'greenhouse-double': [
         "images/11/viber_image_2025-06-13_09-08-42-469.jpg",
         "images/11/viber_image_2025-06-13_09-09-23-880.jpg",
         "images/11/Сп2_ет2_5.jpg",
         "images/11/IMG_20220602_104110.jpg",
-        "images/11/viber_изображение_2022-07-28_15-49-48-792.jpg"
+        "images/11/viber_изображение_2022-07-28_15-49-48-792.jpg",
+        "images/11/vrata 11.jpeg"
     ],
     'redhouse-floor': [
         "images/Етаж 2/Хол_ет2.jpg",
@@ -47,31 +52,33 @@ const galleries = {
         "images/Етаж 2/IMG_20220602_104110.jpg",
         "images/Етаж 2/IMG_20190519_150130.jpg",
         "images/Етаж 2/Сп2_ет2_5.jpg",
-        "images/Етаж 2/viber_изображение_2022-07-28_15-49-48-792.jpg"
+        "images/Етаж 2/viber_изображение_2022-07-28_15-49-48-792.jpg",
+        "images/Етаж 2/vrata 2.jpeg"
     ],
     'redhouse-two': [
+        "images/22/Хол_ет2-3.jpg",
         "images/22/Хол_ет2.jpg",
         "images/22/Хол_ет2_1.jpg",
         "images/22/Хол_ет2_2.jpg",
-        "images/22/Хол_ет2-3.jpg",
         "images/22/Спалня ап.jpg",
         "images/22/Спалня ап2.jpg",
         "images/22/IMG_20210615_130438.jpg",
-        "images/22/IMG_20190519_150130.jpg"
+        "images/22/IMG_20190519_150130.jpg",
+        "images/22/vrata 22.jpeg"
     ],
     'redhouse-double': [
         "images/21/Сп2_ет2.jpg",
         "images/21/Спалня ап.jpg",
         "images/21/Сп2_ет2_4.jpg",
         "images/21/Сп2_ет2_5.jpg",
-        "images/21/viber_изображение_2022-07-28_15-49-48-792.jpg"
+        "images/21/viber_изображение_2022-07-28_15-49-48-792.jpg",
+        "images/21/vrata 21.jpeg"
     ],
     'panorama-two': [
         "images/Етаж 3/IMG_20230818_123617.jpg",
         "images/Етаж 3/IMG_20230818_123656.jpg",
         "images/Етаж 3/signal-2023-08-19-023051_002.jpeg",
         "images/Етаж 3/signal-2023-08-19-023051_003.jpeg",
-        "images/Етаж 3/десен с 2 легла.jpg",
         "images/Етаж 3/IMG_20230818_124006.jpg",
         "images/Етаж 3/малка стая1.jpg",
         "images/Етаж 3/viber_изображение_2024-06-17_15-41-38-027.jpg",
@@ -91,7 +98,6 @@ const galleries = {
         "images/32/IMG_20230818_123617.jpg",
         "images/32/IMG_20230818_123656.jpg",
         "images/32/signal-2023-08-19-023051_003.jpeg",
-        "images/32/десен с 2 легла.jpg",
         "images/32/viber_изображение_2024-06-28_09-14-43-785.jpg",
         "images/32/viber_изображение_2022-07-28_15-49-48-792.jpg",
         "images/32/IMG_20210701_180543.jpg",
@@ -112,14 +118,14 @@ const galleries = {
         "images/31/Сп2_ет2_5.jpg"
     ],
     'studio-three': [
-        "images/Партер голямо/2.jpg",
-        "images/Партер голямо/1.jpg",
+        "images/Партер голямо/viber_изображение_2024-08-01_12-45-17-749.jpg",
         "images/Партер голямо/3.jpg",
+        "images/Партер голямо/2.jpg",
+        "images/Партер голямо/1.jpg",        
         "images/Партер голямо/4.jpg",
         "images/Партер голямо/5.jpg",
         "images/Партер голямо/0-02-05-69baf356ecff0fcfbd77181ee8b4767e7abac373581a294dd0cbeb33fbf0a990_325d846615e079a1.jpg",
         "images/Партер голямо/viber_изображение_2024-08-01_12-45-17-727.jpg",
-        "images/Партер голямо/viber_изображение_2024-08-01_12-45-17-749.jpg",
         "images/Партер голямо/viber_изображение_2024-08-01_12-45-17-837.jpg",
         "images/Партер голямо/viber_изображение_2024-08-01_12-45-18-037.jpg",
         "images/Партер голямо/6.jpg",
@@ -150,11 +156,13 @@ const galleries = {
     ],
     // Галерия за началната страница
     'home': [
-        "dvor1.jpg",
-        "dvor2.jpg",
-        "IMG_20230525_143158.jpg",
-        "Фасада.jpg",
-        "Фасада_1.jpg"
+         "fasada nova.jpeg",
+         "fasada golqmo studio.jpeg",
+         "fasada peika.jpeg",
+         "dvor1.jpg",
+         "dvor2.jpg",
+         "IMG_20230525_143158.jpg",
+         "Фасада.jpg"
     ],
     // Обща галерия за двора и фасадата
     'common-areas': [
