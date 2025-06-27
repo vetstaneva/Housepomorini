@@ -103,7 +103,8 @@ const galleries = {
         "images/32/IMG_20210701_180543.jpg",
         "images/32/IMG_20210701_180555.jpg",
         "images/32/IMG_20190607_105938.jpg",
-        "images/32/IMG_20190519_150130.jpg"
+        "images/32/IMG_20190519_150130.jpg",
+        "images/32/vrata 32.jpeg"
     ],
     'panorama-double': [
         "images/31/Сп2_ет2_2.jpg",
@@ -115,7 +116,8 @@ const galleries = {
         "images/31/Сп2_ет2_4.jpg",
         "images/31/IMG_20210701_130759.jpg",
         "images/31/viber_изображение_2022-07-28_15-49-48-792.jpg",
-        "images/31/Сп2_ет2_5.jpg"
+        "images/31/Сп2_ет2_5.jpg",
+        "images/31/vrata 31.jpeg"
     ],
     'studio-three': [
         "images/Партер голямо/viber_изображение_2024-08-01_12-45-17-749.jpg",
