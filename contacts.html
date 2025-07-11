@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакти</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="phones">
+        <a href="tel:+359887802555" class="phone-number">+359 88 780 2555</a>
+        <a href="tel:+359888150746" class="phone-number">+359 88 815 0746</a>
+      </div>
+    </div>
+    <div class="header-content">
+      <h1>
+        <a href="index.html" class="site-title">Къща Поморини</a>
+      </h1>
+      <nav class="main-menu">
+        <a href="index.html" class="home-btn" aria-label="Начало">
+          <svg width="32" height="32" viewBox="0 0 32 32">
+            <circle cx="16" cy="16" r="16" fill="#0096c7"/>
+            <path d="M10 18V14.5L16 10L22 14.5V18C22 18.55 21.55 19 21 19H11C10.45 19 10 18.55 10 18Z" fill="#fff"/>
+            <rect x="14" y="16" width="4" height="5" rx="1" fill="#0096c7"/>
+          </svg>
+        </a>
+        <div class="dropdown">
+          <button class="dropbtn">Апартамент Грийн Хаус</button>
+          <div class="dropdown-content">
+            <a href="greenhouse-floor.html">Тристаен апартамент</a>
+            <a href="greenhouse-two.html">Двустаен апартамент</a>
+            <a href="greenhouse-double.html">Двойна стая</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Апартамент Ред Хаус</button>
+          <div class="dropdown-content">
+            <a href="redhouse-floor.html">Тристаен апартамент</a>
+            <a href="redhouse-two.html">Двустаен апартамент</a>
+            <a href="redhouse-double.html">Двойна стая</a>
+          </div>
+        </div>
+        <div class="dropdown">
+  <button class="dropbtn">Апартамент Панорама</button>
+  <div class="dropdown-content">
+    <a href="panorama-two.html">Двустаен апартамент</a>
+    <a href="panorama-three.html">Тройна стая</a>
+    <a href="panorama-double.html">Двойна стая</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn" onclick="location.href='studio-sun.html'">Партерно Студио Слънце</button>
+</div>
+<div class="dropdown">
+  <button class="dropbtn" onclick="location.href='studio-green.html'">Партерно Студио Зеления кът</button>
+</div>
+<div class="dropdown burger-dropdown">
+  <button class="burger-btn dropbtn" aria-label="Още">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
+  <div class="dropdown-content burger-content">
+    <a href="contacts.html">Контакти</a>
+    <a href="location.html">Локация</a>
+    <a href="common-areas.html">Общи части</a>
+    <a href="entertainment.html">Забавления на близо</a>
+    <a href="accommodation.html">Настаняване</a>
+  </div>
+</div>
+      </nav>
+    </div>
+  </header>
+  <section class="content-section home-center" id="contacts">
+<h2>Контакти</h2>
+<div class="contacts-flexbox-modern">
+<div class="contacts-phones-modern">
+<div class="phones-title"><span>Телефон за резервации:</span></div>
+<a class="phone-number-modern" href="tel:+359887802555">
+<span class="phone-icon-blue">📞</span> +359 88 780 2555
+            </a>
+<a class="phone-number-modern" href="tel:+359888150746">
+<span class="phone-icon-blue">📞</span> +359 88 815 0746
+            </a>
+<div class="contact-note-bold left-note">
+<b>Моля, имайте предвид, че в къщата няма постоянно присъствие на персонал. За да направите резервация или да получите допълнителна информация, моля свържете се с нас единствено по телефон или чрез формата за контакт.</b>
+</div>
+</div>
+<form action="mailto:evestaneva@gmail.com" class="contact-form-modern small-form" enctype="text/plain" method="POST">
+<div class="form-title">Пишете ни</div>
+<div class="form-row">
+<input id="name" name="name" placeholder="Име*" required="" type="text"/>
+</div>
+<div class="form-row">
+<input id="subject" name="subject" placeholder="Тема*" required="" type="text"/>
+</div>
+<div class="form-row">
+<input id="phone" name="phone" placeholder="Телефонен номер*" required="" type="text"/>
+</div>
+<div class="form-row">
+<input id="email" name="email" placeholder="Имейл*" required="" type="email"/>
+</div>
+<div class="form-row">
+<textarea id="message" name="message" placeholder="Вашето съобщение*" required="" rows="4"></textarea>
+</div>
+<button type="submit">Изпрати</button>
+</form>
+</div>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>
