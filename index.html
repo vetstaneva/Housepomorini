@@ -26,12 +26,12 @@
                 <span class="burger-line"></span>
             </button>
             <div class="dropdown">
-    <button class="dropbtn" data-target="dropdown-desktop-greenhouse">Апартамент Грийн Хаус</button>
-    <div class="dropdown-content" id="dropdown-desktop-greenhouse">
-        <a href="greenhouse-floor.html">Тристаен апартамент</a>
-        <a href="greenhouse-two.html">Двустаен апартамент</a>
-        <a href="greenhouse-double.html">Двойна стая</a>
-    </div>
+    <button class="dropbtn" onclick="document.getElementById('dropdown-mobile-greenhouse').classList.toggle('show'); event.stopPropagation();">Апартамент Грийн Хаус</button>
+<div class="dropdown-content" id="dropdown-mobile-greenhouse">
+    <a href="greenhouse-floor.html">Тристаен апартамент</a>
+    <a href="greenhouse-two.html">Двустаен апартамент</a>
+    <a href="greenhouse-double.html">Двойна стая</a>
+</div>
 </div>
                 <div class="dropdown">
                     <button class="dropbtn" onclick="document.getElementById('dropdown-mobile-redhouse').classList.toggle('show'); event.stopPropagation();">Апартамент Ред Хаус</button>
