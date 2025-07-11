@@ -132,7 +132,7 @@ const galleries = {
     ],
     'studio-two': [
         "images/Партер малко/signal-2025-07-07-120651_005.jpeg",
-        "images/Партер малко/viber_изображение_2024-06-28_09-01-50-951.jpg",
+        "images/Партер малко/StampIT Local Services.lnk.jpeg",
         "images/Партер малко/signal-2025-07-07-120651_006.jpeg",
         "images/Партер малко/signal-2025-07-07-120651_004.jpeg",
         "images/Партер малко/signal-2025-07-07-120651_003.jpeg",
