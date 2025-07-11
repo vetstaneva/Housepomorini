@@ -426,8 +426,7 @@ function toggleLanguage() {
 function applyTranslations() {
     document.querySelector(".site-title").innerText = translations[currentLang].siteTitle;
     document.querySelector("#home h2").innerText = translations[currentLang].welcome;
-    document.querySelector("#contacts h2").innerText = translations[currentLang].contacts;
-    // ...добави всички елементи, които искаш да се превеждат
+     // ...добави всички елементи, които искаш да се превеждат
 }
 
 // --- Десктоп бургер и подменю (НЕ пипай) ---
@@ -544,5 +543,74 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
+  });
+});
+document.querySelectorAll('.dropbtn[data-target]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const targetId = this.getAttribute('data-target');
+        const dropdown = document.getElementById(targetId);
+
+        // Затвори всички други менюта
+        document.querySelectorAll('.dropdown-content').forEach(function (el) {
+            if (el !== dropdown) el.classList.remove('show');
+        });
+
+        dropdown.classList.toggle('show');
+    });
+});
+// Взима всички бутони с атрибут data-target
+const dropdownButtons = document.querySelectorAll('.dropbtn[data-target]');
+
+dropdownButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation(); // предотвратява затваряне при клик върху бутона
+
+    const targetId = button.getAttribute('data-target');
+    const dropdown = document.getElementById(targetId);
+
+    // Скрива всички други отворени падащи менюта
+    document.querySelectorAll('.dropdown-content').forEach(el => {
+      if (el !== dropdown) {
+        el.classList.remove('show');
+      }
+    });
+
+    // Превключва показването на текущото падащо меню
+    dropdown.classList.toggle('show');
+  });
+});
+
+// Ако се кликне извън падащото меню - скрива всички
+window.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown-content').forEach(el => {
+    el.classList.remove('show');
+  });
+});
+// Избираме всички бутони в dropdown менюто
+document.querySelectorAll('.dropbtn').forEach(button => {
+  button.addEventListener('click', function(event) {
+    // Спираме разпространението на събитието, за да не затвори веднага менюто
+    event.stopPropagation();
+
+    // Намираме съответния .dropdown-content в същия родител
+    const dropdownContent = this.nextElementSibling;
+
+    // Затваряме всички други отворени менюта
+    document.querySelectorAll('.dropdown-content.show').forEach(menu => {
+      if (menu !== dropdownContent) {
+        menu.classList.remove('show');
+      }
+    });
+
+    // Превключваме видимостта на текущото меню
+    dropdownContent.classList.toggle('show');
+  });
+});
+
+// Затваряме менюто, ако кликнем някъде навън
+document.addEventListener('click', function() {
+  document.querySelectorAll('.dropdown-content.show').forEach(menu => {
+    menu.classList.remove('show');
   });
 });

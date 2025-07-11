@@ -2096,5 +2096,29 @@ nav button:hover, .dropbtn:hover {
     box-sizing: border-box !important;
   }
 }
+/* Скриваме dropdown съдържанието по подразбиране */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
 
-/* Ако имаш повече от 7 thumbnails, намали width още (пример: 12vw) */
+/* Когато dropdown има клас "show", показваме менюто */
+.dropdown-content.show {
+  display: block;
+}
+
+/* Стилизиране на бутона */
+.dropbtn {
+  cursor: pointer;
+}
+
+/* Контейнер dropdown трябва да е относителен, за да позиционира абсолютното съдържание */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
